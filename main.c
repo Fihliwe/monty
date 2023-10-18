@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 200809L
 #include "monty.h"
 
 monty_t monty = {NULL, NULL, NULL, 0};
@@ -11,7 +12,7 @@ int main(int argc, char *argv[])
 {
 	char *content;
 	FILE *file;
-	/*size_t size = 0;*/
+	size_t size = 0;
 	ssize_t read_line = 1;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;
@@ -31,7 +32,7 @@ int main(int argc, char *argv[])
 	while (read_line > 0)
 	{
 		content = NULL;
-		/*read_line = getline(&content, &size, file);*/
+		read_line = getline(&content, &size, file);
 		monty.content = content;
 		line_number++;
 
