@@ -9,7 +9,7 @@
 
 void _pop(stack_t **head, unsigned int line_number)
 {
-	stack_t x;
+	stack_t *x;
 
 	if (*head == NULL)
 	{

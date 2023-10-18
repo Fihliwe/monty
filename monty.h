@@ -60,5 +60,18 @@ extern monty_t monty;
 void _push(stack_t **head, unsigned int line_number);
 void _pall(stack_t **head, unsigned int line_number);
 void _pint(stack_t **head, unsigned int line_number);
+void _pop(stack_t **head, unsigned int line_number);
+void _swap(stack_t **head, unsigned int line_number);
+void _add(stack_t **head, unsigned int line_number);
+void _sub(stack_t **head, unsigned int line_number);
+void _div(stack_t **head, unsigned int line_number);
+void _mul(stack_t **head, unsigned int line_number);
+void _mod(stack_t **head, unsigned int line_number);
+void _pchar(stack_t **head, unsigned int line_number);
+void _pstr(stack_t **head, unsigned int line_number);
+void _rotl(stack_t **head, __attribute__((unused))unsigned int line_number);
+void _rotr(stack_t **head, __attribute__((unused))unsigned int line_number);
+void _stack(stack_t **head, unsigned int line_number);
+void _queue(stack_t **head, unsigned int line_number);
 
 #endif /* MONTY_H */
