@@ -10,10 +10,10 @@ monty_t monty = {NULL, NULL, NULL, 0};
 */
 int main(int argc, char *argv[])
 {
-	char *content;
+	char *cont;
 	FILE *file;
-	size_t size = 0;
-	ssize_t read_line = 1;
+	size_t amount = 0;
+	ssize_t r_line = 1;
 	stack_t *stack = NULL;
 	unsigned int line_number = 0;
 
@@ -29,18 +29,18 @@ int main(int argc, char *argv[])
 		fprintf(stderr, "Error: Can't open file %s\n", argv[1]);
 		exit(EXIT_FAILURE);
 	}
-	while (read_line > 0)
+	while (r_line > 0)
 	{
-		content = NULL;
-		read_line = getline(&content, &size, file);
-		monty.content = content;
+		cont = NULL;
+		r_line = getline(&cont, &amount, file);
+		monty.content = cont;
 		line_number++;
 
-		if (read_line > 0)
+		if (r_line > 0)
 		{
-			exe_opcode(content, &stack, line_number, file);
+			exe_opcode(cont, &stack, line_number, file);
 		}
-		free(content);
+		free(cont);
 	}
 	free_stack(stack);
 	fclose(file);
