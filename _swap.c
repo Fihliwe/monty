@@ -32,6 +32,6 @@ void _swap(stack_t **head, unsigned int line_number)
 
 	x = *head;
 	plug = x->n;
-	x-> = x->next->n;
+	x->n = x->next->n;
 	x->next->n = plug;
 }

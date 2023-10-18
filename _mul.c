@@ -1,4 +1,4 @@
-#include "montty.h"
+#include "monty.h"
 /**
  * _mul -  multiplies the second top element of the stack
  * @head: start of the stack
@@ -9,7 +9,7 @@
 void _mul(stack_t **head, unsigned int line_number)
 {
 	stack_t *x;
-	int length = 0 
+	int length = 0; 
 	int aux;
 
 	x = *head;

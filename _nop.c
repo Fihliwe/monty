@@ -6,8 +6,8 @@
   * Return: nothing
  */
 
-void f_nop(stack_t **head, unsigned int line_number)
+void _nop(__attribute__((unused))stack_t **head, __attribute__((unused))unsigned int line_number)
 {
-	(void) line_number;
-	(void) head;
+	(void)line_number;
+	(void)head;
 }

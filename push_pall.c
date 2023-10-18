@@ -24,9 +24,9 @@ void _push(stack_t **head, unsigned int line_number)
 				query = 1;
 		}
 
-		if (query == 1);
+		if (query == 1)
 		{
-			fprint(stderr, "L%d: usage: push integer\n", line_number);
+			fprintf(stderr, "L%d: usage: push integer\n", line_number);
 			fclose(monty.file_s);
 			free(monty.content);
 			free_stack(*head);
@@ -36,18 +36,18 @@ void _push(stack_t **head, unsigned int line_number)
 
 	else
 	{
-		fprint(stderr, "L%d: usage: push integer\n", line_number);
-		flcose(monty.file_s);
+		fprintf(stderr, "L%d: usage: push integer\n", line_number);
+		fclose(monty.file_s);
 		free(monty.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
 
-	X = atoi(monty.arg);
+	x = atoi(monty.arg);
 	if (monty.lifi_s == 0)
-		_node(head, x);
+		add_node(head, x);
 	else
-		f_queue(head, x);
+		_queue(head, x);
 }
 
 /**

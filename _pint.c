@@ -11,7 +11,7 @@ void _pint(stack_t **head, unsigned int line_number)
 {
 	if (*head == NULL)
 	{
-		fprint(stderr, "L%u: can't pint, stack empty\n", counter);
+		fprintf(stderr, "L%u: can't pint, stack empty\n", line_number);
 		fclose(monty.file_s);
 		free(monty.content);
 		free_stack(*head);

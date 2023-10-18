@@ -14,7 +14,7 @@ void _pop(stack_t **head, unsigned int line_number)
 	if (*head == NULL)
 	{
 		fprintf(stderr, "L%d: can't pop an empty stack\n", line_number);
-		fclose(monty.arg);
+		fclose(monty.file_s);
 		free(monty.content);
 		free_stack(*head);
 		exit(EXIT_FAILURE);

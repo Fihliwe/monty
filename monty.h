@@ -73,5 +73,10 @@ void _rotl(stack_t **head, __attribute__((unused))unsigned int line_number);
 void _rotr(stack_t **head, __attribute__((unused))unsigned int line_number);
 void _stack(stack_t **head, unsigned int line_number);
 void _queue(stack_t **head, unsigned int line_number);
+void add_queue(stack_t **head, int n);
+void add_node(stack_t **head, int n);
+int exe_opcode(char *content, stack_t **stack, unsigned int line_number, FILE *file);
+void free_stack(stack_t *head);
+void _nop(__attribute__((unused))stack_t **head, __attribute__((unused))unsigned int line_number);
 
 #endif /* MONTY_H */

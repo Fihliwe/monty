@@ -9,7 +9,7 @@
 void _div(stack_t **head, unsigned int line_number)
 {
 	stack_t *x;
-	int length = 0 
+	int length = 0; 
 	int aux;
 
 	x = *head;
@@ -40,3 +40,4 @@ void _div(stack_t **head, unsigned int line_number)
 	x->next->n = aux;
 	*head = x->next;
 	free(x);
+}
